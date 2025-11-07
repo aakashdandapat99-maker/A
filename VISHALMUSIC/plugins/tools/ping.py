@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from config import *
 from VISHALMUSIC import app
-from VISHALMUSIC.core.call import JARVIS
+from VISHALMUSIC.core.call import VISHAL
 from VISHALMUSIC.utils import bot_sys_stats
 from VISHALMUSIC.utils.decorators.language import language
 from VISHALMUSIC.utils.inline import supp_markup
@@ -19,7 +19,7 @@ async def ping_com(client, message: Message, _):
         video=PING_VID_URL,
         caption=_["ping_1"].format(app.mention),
     )
-    pytgping = await JARVIS.ping()
+    pytgping = await VISHAL.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(

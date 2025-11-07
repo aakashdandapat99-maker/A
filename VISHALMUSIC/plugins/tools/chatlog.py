@@ -12,7 +12,7 @@ BOT_INFO: Optional[types.User] = None
 BOT_ID: Optional[int] = None
 
 PHOTOS = [
-    "https://files.catbox.moe/8f8ll8.jpg", 
+    "https://files.catbox.moe/a6sz5r.jpg", 
     "https://files.catbox.moe/53szdj.jpg",
 ]
 

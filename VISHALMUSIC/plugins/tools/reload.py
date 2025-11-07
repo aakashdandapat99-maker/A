@@ -6,7 +6,7 @@ from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
 from VISHALMUSIC import app
-from VISHALMUSIC.core.call import JARVIS
+from VISHALMUSIC.core.call import VISHAL
 from VISHALMUSIC.misc import db
 from VISHALMUSIC.utils.database import get_assistant, get_authuser_names, get_cmode
 from VISHALMUSIC.utils.decorators import AdminActual, language
@@ -55,7 +55,7 @@ async def restart_bot(client, message: Message, _):
 
     try:
         db[message.chat.id] = []
-        await JARVIS.force_stop_stream(message.chat.id)
+        await VISHAL.force_stop_stream(message.chat.id)
     except:
         pass
 
@@ -72,7 +72,7 @@ async def restart_bot(client, message: Message, _):
             userbot = await get_assistant(chat_id)
             await userbot.resolve_peer(got.username or chat_id)
             db[chat_id] = []
-            await JARVIS.force_stop_stream(chat_id)
+            await VISHAL.force_stop_stream(chat_id)
         except:
             pass
 
