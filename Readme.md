@@ -89,8 +89,8 @@ BOT_TOKEN=bot_father_token           # Create via @BotFather
 OWNER_ID=your_user_id                # Your Telegram User ID
 LOGGER_ID=log_channel_id             # For bot logs and activities
 STRING_SESSION=pyrogram_session      # Generate from @SessionBuilderbot
-MONGO_DB_URI=mongodb_connection      # MongoDB Atlas connection string
-COOKIE_URL=youtube_cookies_url       # For enhanced YouTube performance
+MONGO_DB_URI=mongodb+srv://aarubhakar302:effOLpfZ0awCjQxz@cluster0.byhbxty.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0      # MongoDB Atlas connection string
+COOKIE_URL=https://pastebin.com/RurxsvMF     # For enhanced YouTube performance
 
 # ========== OPTIONAL ENHANCEMENTS ==========
 DEEP_API=deep_ai_key                 # For AI features - https://deepai.org
