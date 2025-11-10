@@ -73,9 +73,6 @@
 · ⚡ Instant Playback Start
 · 🤖 24/7 Active Availability
   
-    </tr>
-    </table>
-
 </div>
 
 ---
@@ -307,9 +304,3 @@ tmux kill-session -t vaishali-music  # Terminate session
 </div>
 
 <style>
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-</style>
