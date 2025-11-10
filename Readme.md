@@ -69,39 +69,45 @@
 
 🎵 AUDIO EXCELLENCE
 
-· ✨ Studio Quality 320kbps Audio
-· 🎧 Lag-Free HD Streaming
-· 🔥 High Definition Sound
-· ⚡ Instant Playback Start
-· 🎚️ Audio Effects & Equalizer
+```diff
++ ✨ Studio Quality 320kbps Audio
++ 🎧 Lag-Free HD Streaming  
++ 🔥 High Definition Sound
++ ⚡ Instant Playback Start
++ 🎚️ Audio Effects & Equalizer
+```
 
 🌐 MULTI-PLATFORM SUPPORT
 
-· 📺 YouTube Music Integration
-· 🍎 Apple Music Full Support
-· 🎶 Spotify Playback Compatible
-· ☁️ SoundCloud & Resso Support
-· 📻 JioSaavn & Deezer Ready
-  
+```diff
++ 📺 YouTube Music Integration
++ 🍎 Apple Music Full Support
++ 🎶 Spotify Playback Compatible
++ ☁️ SoundCloud & Resso Support
++ 📻 JioSaavn & Deezer Ready
+```
 
 🛠️ SMART MANAGEMENT
 
-· 👮 Auto Group Management
-· 🎨 Elegant User Interface
-· 🔒 Military Grade Security
-· 🤖 24/7 Active Availability
-· 📊 Real-time Performance Analytics
+```diff
++ 👮 Auto Group Management
++ 🎨 Elegant User Interface  
++ 🔒 Military Grade Security
++ 🤖 24/7 Active Availability
++ 📊 Real-time Performance Analytics
+```
 
 🚀 ADVANCED PERFORMANCE
 
-· ⚡ Lightning Fast Responses
-· 💾 Memory Optimized Operation
-· 🔄 Auto Recovery System
-· 🗃️ Smart Queue Management
-· 🌙 Background Operation Ready
-    </tr>
-    </table>
+```diff
++ ⚡ Lightning Fast Responses
++ 💾 Memory Optimized Operation
++ 🔄 Auto Recovery System
++ 🗃️ Smart Queue Management
++ 🌙 Background Operation Ready
+```
 
+  </table>
 </div>
 
 ---
@@ -110,37 +116,120 @@
 
 🔐 ESSENTIAL CREDENTIALS REQUIRED
 
-```env
-# ========== REQUIRED VARIABLES ==========
-API_ID=your_telegram_api_id           # From https://my.telegram.org
-API_HASH=your_telegram_api_hash       # From https://my.telegram.org
-BOT_TOKEN=bot_father_token           # Create via @BotFather
-OWNER_ID=your_user_id                # Your Telegram User ID
-LOGGER_ID=log_channel_id             # For bot logs and activities
-STRING_SESSION=pyrogram_session      # Generate from @SessionBuilderbot
-MONGO_DB_URI=mongodb_connection      # MongoDB Atlas connection string
-COOKIE_URL=youtube_cookies_url       # For enhanced YouTube performance
+<div align="left">
 
-# ========== OPTIONAL ENHANCEMENTS ==========
-DEEP_API=deep_ai_key                 # For AI features - https://deepai.org
-API_KEY=external_api_key            # Additional music API key
-API_URL=external_api_url            # External service endpoint
+🔑 API ID & HASH
+
+```env
+API_ID=your_telegram_api_id
 ```
 
-<details>
-<summary><b>📖 DETAILED CONFIGURATION GUIDE</b></summary>
+```bash
+# Get from: https://my.telegram.org
+# Go to API Development Tools → Create Application
+```
 
-<br>
+🔑 API HASH
 
-🔑 Key 📍 Source 🛠️ Steps 💡 Notes
-API_ID & API_HASH my.telegram.org API Development Tools → Create Application Keep secure and private
-BOT_TOKEN @BotFather /newbot → Set name & username → Copy token Rotate immediately if exposed
-STRING_SESSION @SessionBuilderbot Provide API credentials → Complete login → Copy string Essential for userbot functionality
-MONGO_DB_URI MongoDB Atlas Create free cluster → Add user → Whitelist IP → Copy URI Required for data persistence
-COOKIE_URL Secure Paste Service Export YouTube cookies → Upload to paste service → Copy raw URL Significantly improves YouTube reliability
+```env
+API_HASH=your_telegram_api_hash
+```
 
-<br>
-</details>
+```bash
+# Get from: https://my.telegram.org  
+# Same page as API_ID - Keep this secure!
+```
+
+🤖 BOT TOKEN
+
+```env
+BOT_TOKEN=bot_father_token
+```
+
+```bash
+# Create via: @BotFather on Telegram
+# Command: /newbot → Set name & username
+```
+
+👤 OWNER ID
+
+```env
+OWNER_ID=your_user_id
+```
+
+```bash
+# Your Telegram User ID
+# Get from: @userinfobot on Telegram
+```
+
+📝 LOGGER ID
+
+```env
+LOGGER_ID=log_channel_id
+```
+
+```bash
+# Create private channel/group
+# Add bot as admin → Get ID via @MissRose_Bot
+```
+
+🔗 STRING SESSION
+
+```env
+STRING_SESSION=pyrogram_session
+```
+
+```bash
+# Generate from: @SessionBuilderbot
+# Provide API_ID & API_HASH → Login → Copy string
+```
+
+🗄️ MONGO DB URI
+
+```env
+MONGO_DB_URI=mongodb_connection
+```
+
+```bash
+# Get from: https://mongodb.com/atlas/database
+# Create free cluster → Add user → Copy connection string
+```
+
+🍪 COOKIE URL
+
+```env
+COOKIE_URL=youtube_cookies_url
+```
+
+```bash
+# For enhanced YouTube performance
+# Upload cookies.txt to Pastebin → Copy raw URL
+```
+
+🤖 DEEP AI API (Optional)
+
+```env
+DEEP_API=deep_ai_key
+```
+
+```bash
+# Get from: https://deepai.org
+# For AI features and enhancements
+```
+
+🔑 EXTERNAL API (Optional)
+
+```env
+API_KEY=external_api_key
+API_URL=external_api_url
+```
+
+```bash
+# Additional APIs for extended functionality
+# Sign up with your preferred service provider
+```
+
+</div>
 
 ---
 
@@ -169,70 +258,139 @@ COOKIE_URL Secure Paste Service Export YouTube cookies → Upload to paste servi
   </table>
 </div>
 
-<details>
-<summary><b>🐳 DOCKER DEPLOYMENT</b></summary>
+🐳 DOCKER DEPLOYMENT
+
+1. Clone Repository
 
 ```bash
-# Step 1: Clone Repository
 git clone https://github.com/ItsMeVishal0/VishalMusic.git
-cd VishalMusic
-
-# Step 2: Create Environment File
-nano .env
-# Paste all your environment variables and save
-
-# Step 3: Build Docker Image
-docker build -t vaishali-music-bot .
-
-# Step 4: Run Container
-docker run -d --name vaishali-bot --env-file .env --restart unless-stopped vaishali-music-bot
-
-# Management Commands
-docker logs -f vaishali-bot        # Live logs monitoring
-docker stop vaishali-bot           # Stop container
-docker start vaishali-bot          # Start container
-docker restart vaishali-bot        # Restart container
 ```
 
-</details>
-
-<details>
-<summary><b>💻 VPS DEPLOYMENT</b></summary>
+2. Navigate to Directory
 
 ```bash
-# System Preparation
-sudo apt update && sudo apt upgrade -y
-sudo apt install git curl python3-pip python3-venv ffmpeg -y
+cd VishalMusic
+```
 
-# Node.js for additional dependencies
+3. Create Environment File
+
+```bash
+nano .env
+```
+
+4. Build Docker Image
+
+```bash
+docker build -t vaishali-music-bot .
+```
+
+5. Run Container
+
+```bash
+docker run -d --name vaishali-bot --env-file .env --restart unless-stopped vaishali-music-bot
+```
+
+🔧 Management Commands
+
+```bash
+# View live logs
+docker logs -f vaishali-bot
+
+# Stop container
+docker stop vaishali-bot
+
+# Start container  
+docker start vaishali-bot
+
+# Restart container
+docker restart vaishali-bot
+
+# Remove container
+docker rm -f vaishali-bot
+
+# Remove image
+docker rmi vaishali-music-bot
+```
+
+💻 VPS DEPLOYMENT
+
+1. System Preparation
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+2. Install Essential Packages
+
+```bash
+sudo apt install git curl python3-pip python3-venv ffmpeg -y
+```
+
+3. Install Node.js
+
+```bash
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install -y nodejs
 npm install -g npm
-
-# Repository Setup
-git clone https://github.com/ItsMeVishal0/VishalMusic.git
-cd VishalMusic
-
-# Session Management with tmux
-tmux new -s vaishali-music
-
-# Virtual Environment & Dependencies
-python3 -m venv venv
-source venv/bin/activate
-pip install -U pip
-pip install -r requirements.txt
-
-# Configuration & Startup
-bash setup   # Interactive environment setup
-bash start   # Launch the bot
-
-# Useful Session Commands
-tmux detach                          # Detach session (Ctrl+B then D)
-tmux attach-session -t vaishali-music # Reattach to session
-tmux kill-session -t vaishali-music  # Terminate session
 ```
 
-</details>
+4. Clone Repository
+
+```bash
+git clone https://github.com/ItsMeVishal0/VishalMusic.git
+```
+
+5. Navigate to Directory
+
+```bash
+cd VishalMusic
+```
+
+6. Create tmux Session
+
+```bash
+tmux new -s vaishali-music
+```
+
+7. Setup Virtual Environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+8. Install Dependencies
+
+```bash
+pip install -U pip
+pip install -r requirements.txt
+```
+
+9. Configuration & Startup
+
+```bash
+# Interactive setup
+bash setup
+
+# Launch bot
+bash start
+```
+
+🔧 Session Management
+
+```bash
+# Detach from session (Ctrl+B then D)
+tmux detach
+
+# Reattach to session
+tmux attach-session -t vaishali-music
+
+# Terminate session
+tmux kill-session -t vaishali-music
+
+# Uninstall completely
+rm -rf VishalMusic
+```
 
 ---
 
