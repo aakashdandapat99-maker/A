@@ -5,6 +5,11 @@ asyncio
 bing_image_downloader
 bs4
 deepai
+pyrogram
+telethon
+pytgcalls
+Flask
+gunicorn
 edge-tts
 ffmpeg-python
 future
