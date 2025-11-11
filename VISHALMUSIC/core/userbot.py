@@ -8,7 +8,7 @@ assistants = []
 assistantids = []
 
 GROUPS_TO_JOIN = [
-    "ItsMeVishalBots",
+    "a4x_DarkOp",
 ]
 
 
@@ -16,35 +16,35 @@ GROUPS_TO_JOIN = [
 class Userbot:
     def __init__(self):
         self.one = Client(
-            "VishalAssis1",
+            "DarkOpAssis1",
             config.API_ID,
             config.API_HASH,
             session_string=str(config.STRING1),
             no_updates=True,
         )
         self.two = Client(
-            "VishalAssis2",
+            "DarkOpAssis2",
             config.API_ID,
             config.API_HASH,
             session_string=str(config.STRING2),
             no_updates=True,
         )
         self.three = Client(
-            "VishalAssis3",
+            "DarkOpAssis3",
             config.API_ID,
             config.API_HASH,
             session_string=str(config.STRING3),
             no_updates=True,
         )
         self.four = Client(
-            "VishalAssis4",
+            "DarkOpAssis4",
             config.API_ID,
             config.API_HASH,
             session_string=str(config.STRING4),
             no_updates=True,
         )
         self.five = Client(
-            "VishalAssis5",
+            "DarkOpAssis5",
             config.API_ID,
             config.API_HASH,
             session_string=str(config.STRING5),
@@ -74,7 +74,7 @@ class Userbot:
 
             try:
                 await client.send_message(
-                    config.LOGGER_ID, f"Vishal's Assistant {index} Started"
+                    config.LOGGER_ID, f"DarkOp's Assistant {index} Started"
                 )
             except Exception:
                 LOGGER(__name__).error(
@@ -92,7 +92,7 @@ class Userbot:
             LOGGER(__name__).error(f"Failed to start Assistant {index}: {e}")
 
     async def start(self):
-        LOGGER(__name__).info("Starting Vishal's Assistants...")
+        LOGGER(__name__).info("Starting DarkOp's Assistants...")
         await self.start_assistant(self.one, 1)
         await self.start_assistant(self.two, 2)
         await self.start_assistant(self.three, 3)
